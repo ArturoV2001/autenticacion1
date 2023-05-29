@@ -1,0 +1,20 @@
+<h3>Ingresa tus datos para acceder</h3>
+<br>
+<form [formGroup]="form">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Correo electronico" aria-label="Username"
+            aria-describedby="basic-addon1" formControlName="email">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">XXXX</span>
+        <input type="password" class="form-control" placeholder="Contrasena" aria-label="Username"
+            aria-describedby="basic-addon1" formControlName="password">
+    </div>
+</form>
+<p id="mostrarError" *ngIf="error" [innerHTML]="mostrarMsj"></p>
+<p id="mostrarExito" *ngIf="exito" [innerHTML]="mostrarMsj"></p>
+<div class="d-grid gap-2">
+    <button class="btn btn-primary" type="button" (click)="ingresar()">Ingresar</button>
+    <button class="btn btn-primary" type="button" (click)="ingresarGoogle()">Ingresar con Google</button>
+</div>

@@ -1,0 +1,15 @@
+h1{
+    width: 100vw;
+    text-align: center;
+    padding: 2vh 2vw 2vh 2vw;
+}
+#contenido{
+    margin: 5vh 10vw 10vh 10vw;
+    /*border: 1px black solid;*/
+    width: 80vw;
+    height: auto;
+    background-color: white;
+    color: black;
+    border-radius: 1vw;
+    padding: 3vh 2vw 5vh 2vw;
+}

@@ -1,0 +1,24 @@
+<div>
+    <h4>Ingresa tu numero telefonico</h4>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"> +52 </span>
+        <input type="text" class="form-control" placeholder="" aria-label="Username"
+            aria-describedby="basic-addon1" [(ngModel)]="telefono">
+    </div>
+    <div class="d-grid gap-2">
+        <button *ngIf="!telIngresado" class="btn btn-primary" type="button" (click)="continuar()">Continuar</button>
+    </div>
+</div>
+<div *ngIf="telIngresado">
+    <h4>Ingresa el codigo mandado por SMS</h4>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="" aria-label="Username"
+            aria-describedby="basic-addon1" [(ngModel)]="codigo">
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button">Ingresar</button>
+    </div>
+</div>
+<p id="mostrarError" *ngIf="error" [innerHTML]="mostrarMsj"></p>
+<p id="mostrarError" *ngIf="exito" [innerHTML]="mostrarMsj"></p>
+
